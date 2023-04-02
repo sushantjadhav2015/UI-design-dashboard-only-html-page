@@ -1,0 +1,27 @@
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56.5px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+
+@media (min-width: 992px) {
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+.custom-width {
+  width: 300px;
+}

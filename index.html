@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- TODO . this link used for bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+
+  <!-- TODO . this link used for bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Angular UI machine test</title>
+</head>
+
+<body>
+  <!-- top navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+      </button>
+      <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">marman platic woks</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+        aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <form class="d-flex ms-5 my-3 my-lg-0">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-primary" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+        <ul class="navbar-nav ms-auto my-3 my-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-person-fill"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- top navigation bar -->
+  <!-- offcanvas -->
+  <div class="offcanvas offcanvas-start sidebar-nav bg-dark" id="sidebar">
+    <div class="offcanvas-body">
+      <nav class="navbar-dark">
+        <ul class="navbar-nav">
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-house-door"></i></span>
+              <span>OVERVIEW</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-funnel"></i></span>
+              <span>FUNNEL'S</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-wallet2"></i></span>
+              <span>MERCHANTS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-bar-chart-line-fill"></i></span>
+              <span>REPORT</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-pie-chart-fill"></i></span>
+              <span>CAPAIGN</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-calculator"></i></span>
+              <span>CALCULATOR</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- offcanvas -->
+
+
+  <main class="mt-5 pt-3">
+    <div class="container-fluid col-11 ">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <h4>FUNNEL</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <!-- Example info drop down -->
+          <div class="btn-group custom-width">
+            <button type="button" class="btn btn-info dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown 1
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-5 mb-3">
+          <!-- Example yellow dropdown -->
+          <div class="btn-group custom-width">
+            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown 2
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 mb-3">
+          <!-- Example single danger button -->
+          <div class="btn-group ms-4">
+            <button type="button" class="btn btn-danger">
+              Button
+            </button>
+          </div>
+        </div>
+
+        <!-- carts visitor start -->
+        <div class="row justify-content-center">
+          <div class="col md-2 mb-3">
+            <div class="card bg-secondary text-white h-100">
+              <div class="card-body py-4">
+                <h3 class="px-6">04</h3>
+                <span>Visitor</span>
+              </div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col md-2 mb-3">
+            <div class="card bg-primary text-dark h-100">
+              <div class="card-body py-4">
+                <h3 class="px-6">525</h3>
+                <span>Conversion</span>
+              </div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col md-2 mb-3">
+            <div class="card bg-success text-white h-100">
+              <div class="card-body py-4">
+                <h3 class="px-6">$25.6</h3>
+                <span>Amount</span>
+              </div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col md-2 mb-3">
+            <div class="card bg-danger text-white h-100">
+              <div class="card-body py-4">
+                <h3 class="px-6">$54</h3>
+                <span>Sell</span>
+
+              </div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col md-2 md-3 mb-3">
+            <div class="card bg-info text-white h-100">
+              <div class="card-body py-4">
+                <h3 class="px-6">125</h3>
+                <span>AVD</span>
+              </div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- slider navigation -->
+        <div class="row">
+          <div class="col-md-6 mt-4">Funnels Steps
+            <span><button type="button" class="btn btn-info"> button</button></span>
+          </div>
+          <div class="col-md-6 mt-4">
+            <button type="button" data-bs-target="#slide" data-bs-slide="prev">
+              <span class="bi bi-arrow-left-short"></span>
+            </button>
+
+            <button type="button" data-bs-target="#slide" data-bs-slide="next">
+              <span class="bi bi-arrow-right-short"></span>
+            </button>
+          </div>
+        </div>
+        <!-- area cart start -->
+
+        <div id="slide" class="carousel slide mt-5 mb-3" data-bs-touch="false" data-bs-interval="false">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+
+              <div class="row justify-content-center">
+                <div class="col-6 md-2 mb-3">
+                  <div class="card bg-secondary text-white">
+                    <h5 class="card-title ms-5 mt-3 fw-bold text-uppercase">Card title 1</h5>
+                    <div class="row">
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32658</h3>
+                        <span>Visitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 md-2 mb-3">
+                  <div class="card bg-primary text-white">
+                    <h5 class="card-title ms-5 mt-3 fw-bold text-uppercase">Card title 2</h5>
+                    <div class="row">
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32658</h3>
+                        <span>Visitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col md-2 mb-3">
+                  <div class="card bg-info text-white">
+                    <h5 class="card-title ms-5 mt-3 fw-bold text-uppercase">Card title 3</h5>
+                    <div class="row">
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32658</h3>
+                        <span>Visitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-2 mb-3">
+                  <div class="card bg-warning text-white">
+                    <h5 class="card-title ms-5 mt-3 fw-bold text-uppercase">Card title 4</h5>
+                    <div class="row">
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32658</h3>
+                        <span>Visitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col md-2 mb-3">
+                  <div class="card bg-danger text-white">
+                    <h5 class="card-title ms-5 mt-3 fw-bold text-uppercase">Card title 5</h5>
+                    <div class="row">
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32658</h3>
+                        <span>Visitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-2 mb-3">
+                  <div class="card bg-success text-white">
+                    <h5 class="card-title ms-5 mt-3 fw-bold text-uppercase">Card title 6</h5>
+                    <div class="row">
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32564</h3>
+                        <span>Visitor</span>
+                      </div>
+                      <div class="col ms-4 py-4">
+                        <h3 class="px-6">32658</h3>
+                        <span>Visitor</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <!-- TODO. this script used for bootstrap JS files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
